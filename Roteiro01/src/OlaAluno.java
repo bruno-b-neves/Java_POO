@@ -5,9 +5,9 @@ public class OlaAluno { // Define a classe OlaAluno
     // Cria um objeto Scanner para ler a entrada do usuário
     Scanner scanner = new Scanner(System.in);
     
-    String nome; // Declara uma variável para armazenar o nome do aluno
-    int idade; // Declara uma variável para armazenar a idade do aluno
-    String curso; // Declara uma variável para armazenar o curso do aluno
+    private String nome; // Declara uma variável para armazenar o nome do aluno
+    private int idade; // Declara uma variável para armazenar a idade do aluno
+    private String curso; // Declara uma variável para armazenar o curso do aluno
 
     // Define um método para apresentar o aluno e solicitar seu nome
     public void apresentacaoAluno() { 
