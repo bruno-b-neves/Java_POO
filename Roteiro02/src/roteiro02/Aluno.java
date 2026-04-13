@@ -1,4 +1,4 @@
-
+package roteiro02;
 
 public class Aluno {
     public String nome; // Declara uma variável para armazenar o nome do aluno
