@@ -13,6 +13,7 @@ Todos os códigos presentes aqui foram desenvolvidos durante as aulas práticas 
 Aqui estão as aulas práticas realizadas ao longo do semestre. Clique em cada uma para ver os códigos e explicações detalhadas:
 
 * [Roteiro 01 - Introdução à POO e Entrada de Dados](./Roteiro01)
+* [Roteiro 02 - Controle de Fluxo em Java Estrutura Condicionais e Estruturas de Repetição](./Roteiro02)
 
 ---
 
