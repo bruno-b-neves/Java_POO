@@ -11,6 +11,12 @@ class Funcionario {
         this.salario = salario; // Inicializa o atributo salario com o valor passado como parâmetro
     }
 
+    // Construtor padrão para criar um funcionário sem nome e salário definidos
+    public Funcionario() {
+        this.nome = "Desconhecido";
+        this.salario = 0;
+    }
+
     // Getters para acessar os atributos nome e salario
     public String getNome() {
         return nome;
@@ -21,11 +27,19 @@ class Funcionario {
         return salario;
     }
 
-    // Setters para modificar os atributos nome
+    // Setters para modificar os atributos nome e salario
     public void setNome(String nome) {
         this.nome = nome;
 
         if (nome == null || nome.isEmpty() || nome.length() < 2) {
+            System.out.println("Nome inválido. O nome deve conter pelo menos 2 caracteres.");
+        }
+    }
+
+    public void setNome(String nome, boolean mensagem) {
+        this.nome = nome;
+
+        if (mensagem) {
             System.out.println("Nome inválido. O nome deve conter pelo menos 2 caracteres.");
         }
     }
@@ -43,7 +57,18 @@ class Funcionario {
         }
     }
 
+    // Setter para modificar o atributo salario com uma mensagem de validação
+    public void setSalario(double salario, boolean mensagem) {
+        this.salario = salario;
 
+        if (mensagem) {
+            System.out.println("Salário inválido. O salário deve ser um valor positivo.");
+        } else if (salario > 15.000) {
+            System.out.println("Salário muito alto. O salário deve ser um valor razoável.");
+        } else if (salario < 1.650) {
+            System.out.println("Salário muito baixo. O salário deve ser um valor que permita uma vida digna.");
+        }
+    }
 
     // Método para exibir os dados do funcionário
     public void exibirDados() {

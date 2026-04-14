@@ -10,21 +10,32 @@ class Gerente extends Funcionario {
         this.bonus = bonus; // Inicializa o atributo bônus
     }
 
+    // Getter para acessar o atributo bonus
     public double getBonus() {
         return bonus;
     }
 
+    // Setter para modificar o atributo bonus
     public void setBonus(double bonus) {
         this.bonus = bonus;
 
         if (bonus < 0) {
             System.out.println("Bônus inválido. O bônus deve ser um valor positivo.");
-        } else if (bonus > (getSalario() * 0.25)) {
+        } else if (bonus > (getSalario() * 0.10)) {
             System.out.println("Bônus muito alto. O bônus deve ser um valor razoável.");
         }
     }
 
-    // Sobrescreve o método exibirDados para incluir o curso do aluno
+    // Setter para modificar o atributo bonus com uma mensagem de validação
+    public void setBonus(double bonus, boolean mensagem) {
+        this.bonus = bonus;
+
+        if (mensagem) {
+            System.out.println("Bônus inválido. O bônus deve ser um valor positivo.");
+        }
+    }
+
+    // Sobrescreve o método exibirDados para incluir o bônus do gerente
     @Override
 
     // O método exibirDados chama o método exibirDados da classe Funcionario 
@@ -32,5 +43,15 @@ class Gerente extends Funcionario {
     public void exibirDados() {
         super.exibirDados(); // Chama o método exibirDados da classe Funcionario para exibir o nome e o salário
         System.out.println("Bônus: " + bonus); // Exibe o bônus do gerente
+    }
+
+    // Sobrescreve o método exibirDados para incluir o bônus do gerente com uma mensagem de validação
+    public void exibirDados(boolean mensagem) {
+        super.exibirDados(); // Chama o método exibirDados da classe Funcionario para exibir o nome e o salário
+        System.out.println("Bônus: " + bonus); // Exibe o bônus do gerente
+
+        if (mensagem) {
+            System.out.println("Bônus inválido. O bônus deve ser um valor positivo.");
+        }
     }
 }
