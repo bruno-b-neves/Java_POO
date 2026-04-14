@@ -10,6 +10,11 @@ class Gerente extends Funcionario {
         this.bonus = bonus; // Inicializa o atributo bônus
     }
 
+    // Método para calcular o salário total do gerente, incluindo o bônus
+    public double calcularSalarioComBonus() {
+        return getSalario() + bonus; // Retorna o salário total do gerente, que é a soma do salário base e do bônus
+    }
+
     // Getter para acessar o atributo bonus
     public double getBonus() {
         return bonus;
