@@ -1,7 +1,6 @@
 package roteiro02;
 
 import java.util.Scanner;
-
 public class App {
     public static void main(String[] args) throws Exception {
         Aluno msg = new Aluno(); // Cria um objeto da classe Aluno
