@@ -1,0 +1,10 @@
+package animais;
+
+public class Cachorro extends Animal {
+	
+	// Tempo de execução (Sobrescrita)	
+	@Override
+	public void emitirSom() {
+		System.out.println("Latido");
+	}
+}
